@@ -1,36 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Enums101
+namespace Mainmethod
 {
     class Program
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Console.WriteLine("What day is it today?"); // asking for a user input
-                string today = Console.ReadLine();
-                Day inputDay = (Day)Enum.Parse(typeof(Day), today); 
-              
-                {
-                    Console.WriteLine("Today is " + inputDay); //writing in console of the user input 
-                }
 
+            Operator FirstOp = new Operator(); //instantiating the class
+            Console.WriteLine("Pick a number:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Pick another number:");
+            var num2isValid = int.TryParse(Console.ReadLine(), out int num2);
+
+            int result = 0;
+            if (num2isValid)
+            {
+                result = (num1 + num2);
+            }
+            else
+            {
+                result = (num1);
 
             }
-            catch (FormatException) //using try/catch block if any error occurs
-            {
-                Console.WriteLine("Please enter an actual day of the week.");
-            }
-            catch (ArgumentException)
-            {
-                Console.WriteLine("Please enter an actual day of the week.");
-            }
+
+            Console.WriteLine(result);
             Console.ReadLine();
+      
+
+
+               
+            
+                
+
         }
     }
 }
