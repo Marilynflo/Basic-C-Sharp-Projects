@@ -8,7 +8,7 @@ namespace Mainmethod
     {
         public void MathMethodFirst(int num1, int num2)  //creating a class that takes two integers
         {
-            int result = num1  + num2;
+            int result = num1  * num2;
             
  
 
