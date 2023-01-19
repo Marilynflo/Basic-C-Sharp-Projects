@@ -6,12 +6,9 @@ namespace Mainmethod
 {
     public class Operator
     {
-        public void MathMethodFirst(int num1, int num2)  //creating a class that takes two integers
+        public int Add(int x, int y = 4) //creating a class with 2 parameters- optional parameters
         {
-            int result = num1  * num2;
-            
- 
-
+            return x + y;
         }
     }
 }
